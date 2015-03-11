@@ -1,5 +1,9 @@
 ---
 applications: 
-- name: hello-java
+- name: hello-java-hook
   mem: 512M
-  path: target/hello-java-1.0.war
+  path: target/hello-java-1.0
+  stackato:
+    hooks:
+      post-staging:
+      - echo sup bro
